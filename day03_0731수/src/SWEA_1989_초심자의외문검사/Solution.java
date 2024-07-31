@@ -15,15 +15,15 @@ public class Solution {
 		
 		for(int test_case = 1; test_case <= T; test_case++)
 		{
-			String st=sc.nextLine();
-			ArrayList<Character> list = new ArrayList<Character>();
+			String st=sc.nextLine();									// 문자 출력
+			ArrayList<Character> list = new ArrayList<Character>();		// 리스트 선언
 			for (int i = 0; i < st.length(); i++) {				// 문자를 리스트화
 				list.add(st.charAt(i));
 			}
-			ArrayList<Character> rlist = new ArrayList<>(list);
-			Collections.reverse(rlist);
+			ArrayList<Character> rlist = new ArrayList<>(list);			// 반전시킬 리스트 초기화
+			Collections.reverse(rlist);									// 해당 리스트 반전
 			System.out.print("#" + test_case + " ");
-			if (list.equals(rlist)) {
+			if (list.equals(rlist)) {									// 리스트와 반전된 리스트 비교
 				System.out.println("1");
 			} else {
 				System.out.println("0");
@@ -32,27 +32,3 @@ public class Solution {
 	}
 }
 
-
-
-
-		// for(int test_case = 1; test_case <= T; test_case++)
-		// {
-		// 	String st=sc.nextLine();
-		// 	if (isPalindrome(st)) {
-		// 		System.out.println("1");
-		// 	} else {
-		// 		System.out.println("0");
-		// 	}
-		// }
-//			for (int i = 0; i < st.length(); i++) {
-//				arr[i] = st.charAt(i);
-//			}
-//			List<Integer> list = Arrays.asList(arr);
-//			Collections.reverse(list);
-//			if (list == Collections.reverse(list)) {
-//				ans = 1;
-//			} else {
-//				ans = 0;
-//			}
-//			System.out.print("#" + test_case + " ");
-//			System.out.println(ans);
