@@ -45,7 +45,8 @@ public class Solution {
 		
 		int totmax = Math.max(maxnm, maxra);
             System.out.print("#" + test_case + " ");
-            System.out.println(totmax);
+            System.out.println(totmax);			// 두번째 케이스부터 답이10 차이나더니 자잘하게 오답...이 떠서 
+												// 장시간에 걸쳐 해결하려 했음에도 실패했습니다...
 		}
 	}
 }
