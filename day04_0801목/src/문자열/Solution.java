@@ -17,7 +17,7 @@ class Solution
         int [] counting = new int[size+1];
         int [] ans = new int[size];
         
-		for(int test_case = 1; test_case <= 1; test_case++)
+		for(int test_case = 1; test_case <= T; test_case++)
 		{        
 
 			int dump = sc.nextInt();
