@@ -1,9 +1,8 @@
 package 문자열;
 
-import java.util.Scanner;
-import java.io.FileInputStream;
-import java.util.Arrays;
+public class Solution {
 
+<<<<<<< HEAD
 
 class Solution
 {
@@ -51,3 +50,6 @@ class Solution
 		}
 	}
 	}
+=======
+}
+>>>>>>> 22d16f3f24dbaccc2ba83dbdf4f8fe54a21f6c1e
