@@ -3,7 +3,7 @@ package SWEA_1224_계산기3;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import SWEA_1224_계산기3.stack_9hyun;
+import SWEA_1224_계산기3.stack;
 
 public class Solution {
 	
@@ -16,7 +16,6 @@ public class Solution {
 		String expression = sc.next();
 		
 		String postfix = infixToPostfix(expression);
-//		System.out.println(postfix);
 		int result = evalPostfix(postfix);
 		System.out.println("#" + test_case + " " + result);
 		}
@@ -40,7 +39,7 @@ public class Solution {
 		static String infixToPostfix(String infix) {	// 중위 표기식
 			
 			String postfix = "";						// 길이가 0인 문자열로 초기화
-			 stack_9hyun stack = new stack_9hyun();
+			 stack<Character> stack = new<> stack(infix.length());
 			
 			for (int i = 0; i < infix.length(); i++) {
 				char c = infix.charAt(i);
@@ -78,7 +77,7 @@ public class Solution {
 		}
 		static int evalPostfix(String postfix) {
 			
-			 stack_9hyun stack = new stack_9hyun();
+			 stack<Integer> stack = new stack<>(postfix.length());
 			
 			for ( int i = 0; i < postfix.length(); i++) {
 				char c = postfix.charAt(i);
@@ -102,3 +101,5 @@ public class Solution {
 		}
 		
 }
+
+// 일단 계산값은 정상...
