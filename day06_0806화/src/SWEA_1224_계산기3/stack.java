@@ -1,19 +1,17 @@
-package SWEA_1222_계산기1;
+package SWEA_1224_계산기3;
 
-public class stack_9hyun<T> {
+public class stack<T> {
 
-		private int max;
 		private int top;
 		private T[] stack;
 		
-		public stack_9hyun(int size) {
-			this.max = size;
-			this.stack = (T[]) new Object[max];
+		public stack(int size) {
+			this.stack = (T[]) new Object[size];
 			this.top = -1;
 		}
 		
 		public void push(T value) {
-			if(top >= max-1) {
+			if(top >= stack.length - 1) {
 				return;
 			}
 			stack[++top] = value;
@@ -23,12 +21,19 @@ public class stack_9hyun<T> {
 			if (isEmpty()) {
 				return null;
 			}
-			T value = stack[top--];
-			return value;
+			return stack[top--];
 		}
 		
 		public Boolean isEmpty() {
-			return top == -1;	
+			return ( top == -1);
+		}
+		
+		public T peek() {
+			if (isEmpty()) {
+				return null;
+			}
+			return stack[top];
+
 		}
 		
 //		public int size() {

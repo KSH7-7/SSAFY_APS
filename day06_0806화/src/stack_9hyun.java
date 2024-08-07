@@ -1,5 +1,5 @@
 
-public class stack_9hyun {
+public class stack {
 
 	public static void main(String[] args) {
 		private int max;
