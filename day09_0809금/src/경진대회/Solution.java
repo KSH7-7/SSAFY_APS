@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class SERORO {
+public class Solution {
 
-public static void main(String[] args) throws StringIndexOutOfBoundsException {
+	public static void main(String[] args) throws StringIndexOutOfBoundsException {
 		
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();										// 테스트 케이스 사이즈																			
@@ -15,13 +15,12 @@ public static void main(String[] args) throws StringIndexOutOfBoundsException {
 			
 			System.out.print("#" + test_case + " ");
 			
-			for(int j = 0; j < 15; j++) {
-				for(int i = 0; i < 5; i++) {
-					// 각 문자열의 특정 부분을 세로로 변형
-					if ( garo[j].charAt(i) == 0 ) {		
-						continue;
-					}		
-					else sero = garo[j].charAt(i);	
+			for(int i = 0; i < 5; i++) {
+				for(int j = 0; j < 5; j++) {
+				sero = garo[j].charAt(i);							// 각 문자열의 특정 부분을 세로로 변형
+//				if ( garo[j].charAt(i) = null ) {
+//					return "";
+//				}		
 				System.out.print(sero);								// 세로로 읽은 문자의 합을 읽음
 				}
 			}
@@ -30,8 +29,8 @@ public static void main(String[] args) throws StringIndexOutOfBoundsException {
 		sc.close();
 	}
 
-
 }
+
 // 샘플 결과창
 //#1 Aa0FfBb1GgCc2HhDd3IiEe4Jj
 //
