@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="경진대회(제출본이랑 살짝 다름)/" kind="src" path=""/>
+	<classpathentry kind="src" path="경진대회(제출본이랑 살짝 다름)"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
