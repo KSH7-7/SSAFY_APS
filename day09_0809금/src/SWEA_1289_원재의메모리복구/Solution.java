@@ -12,26 +12,25 @@ class Solution
 
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
-         int i = 0;
-         ArrayList<Integer> AL = new ArrayList<>();
+		
 		for(int test_case = 1; test_case <= T; test_case++)
 		{
 			String N = sc.next();
-			int L = N.toCharArray().length;
-			int cnt = 0;
+			ArrayList<Integer> AL = new ArrayList<>();
+			for (int i = 0; i < N.length(); i++ ) {
+				AL.add(N.charAt(i));								// 입력받은 비트를 char 동적배열화
+			}
 
-			for (i = 0; i < L; i++) {
-				if ( AL.get(i) == 0 && AL.get(i+1) == 1) {
-					cnt++;
-					}
-				if (AL.get(i) == 1 && AL.get(i+1) == 0) {
-                    cnt++;
-                    if (AL.get(i) == 1) {
-                        cnt++;
-                    }
-                }
-             }
-            System.out.println("#" + test_case + " " + cnt);
+			int cnt = 0;											// 카운트 초기화
+			char bit = '0';											// 비트 초기화
+
+			for ( int j = 0; j < AL.size(); j++) {
+				if ( AL.get(i) != bit ) {							// 현재 비트와 이전 비트가 다르면 1회 뒤집힌것 like 오델로
+					cnt++;											
+					bit = AL.get(j);								// 비트 갱신						
+				}
+			}
+			System.out.println("#" + test_case + " " + cnt);
 	}
 		sc.close();
 }

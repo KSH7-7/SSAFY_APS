@@ -1,6 +1,7 @@
 package SWEA_6190_정곤이의단조증가하는수;
 
 import java.util.Scanner;
+import java.io.FileInputStream;
 
 public class Solution {
 	
@@ -19,10 +20,10 @@ public class Solution {
 	}
 	for (int j = 1; j < N-1; j++) {
 		for (int k = j+1; k < N; k++) {
-			int AA = num[j]*num[k];
-			if (AA > last) {
-				last = AA;
-				}
+			// int AA = num[j]*num[k];
+			if( num[j+1]*num[k] >= num[j]*num[k] && num[j]*num[k+1] >= num [j]*num[k] &&  ) {
+				last = num[j]*num[k];
+			}
 			}
 		}
 	System.out.println("#" + test_case + " " + last);
